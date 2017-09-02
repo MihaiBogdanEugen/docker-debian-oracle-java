@@ -1,5 +1,5 @@
-# Start from debian jessie-slim
-FROM debian:jessie-slim
+# Start from debian stretch-slim
+FROM debian:stretch-slim
 
 # Setup JAVA_HOME
 ENV JAVA_HOME="/usr/lib/jvm/default-jvm"
