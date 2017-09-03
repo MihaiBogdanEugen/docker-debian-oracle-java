@@ -4,7 +4,7 @@
 
 * ```jesse-slim-8u144``` _\([jesse-slim-8u144/Dockerfile]\)_
 [![](https://images.microbadger.com/badges/image/mbe1224/debian-oraclejdk:jesse-slim-8u144.svg)](https://microbadger.com/images/mbe1224/debian-oraclejdk:jesse-slim-8u144 "")
-* ```stretch-slim-8u144``` _\([stretch-slim-8u144/Dockerfile]\)_
+* ```stretch-slim-8u144```, ```latest``` _\([stretch-slim-8u144/Dockerfile]\)_
 [![](https://images.microbadger.com/badges/image/mbe1224/debian-oraclejdk:stretch-slim-8u144.svg)](https://microbadger.com/images/mbe1224/debian-oraclejdk:stretch-slim-8u144 "")
 
 #### All tag names follow the naming convention:
