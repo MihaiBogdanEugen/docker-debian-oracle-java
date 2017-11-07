@@ -1,6 +1,6 @@
-## Docker Debian images with Oracle Java (JDK/JRE/ServerJRE)
+## Docker Debian images with Oracle Java (JDK/JRE/ServerJRE) ##
 
-### Supported tags and respective Dockerfile links:
+### Supported tags and respective Dockerfile links: ###
 
 * ```jessie-slim-jdk8``` _\([jessie-slim-jdk8/Dockerfile]\)_
 [![](https://images.microbadger.com/badges/image/mbe1224/docker-debian-oracle-java:jessie-slim-jdk8.svg)](https://microbadger.com/images/mbe1224/docker-debian-oracle-java:jessie-slim-jdk8 "")
@@ -27,18 +27,18 @@
 * ```stretch-slim-server-jre9``` _\([stretch-slim-server-jre9/Dockerfile]\)_
 [![](https://images.microbadger.com/badges/image/mbe1224/docker-debian-oracle-java:stretch-slim-server-jre9.svg)](https://microbadger.com/images/mbe1224/docker-debian-oracle-java:stretch-slim-server-jre9 "")
 
-#### All tag names follow the naming convention:
+#### All tag names follow the naming convention: ###
 
 ```debian_image_tag``` + '-' + ```jdk/jre/server-jre``` + ```java_version```
 
-### Usage:
+### Usage: ###
 
 Build the image
 ```shell
-docker build -t docker-debian-oracle-java /stretch-slim/java9/jdk/
+docker build -t debian-oracle-java /stretch-slim/java9/jdk/
 ```
 
-### About this image:
+### About this image: ###
 
 - Currently supporting java versions **8u152** and **9.0.1**
 - Debian "slim" image variant
@@ -47,7 +47,7 @@ docker build -t docker-debian-oracle-java /stretch-slim/java9/jdk/
 - SHA 256 sum checks for all downloads
 - JAVA\_HOME environment variable set up
 
-### License:
+### Dual licensed under: ###
 
 * [MIT License]
 * [Oracle Binary Code License Agreement]
