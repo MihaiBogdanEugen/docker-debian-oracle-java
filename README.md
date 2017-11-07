@@ -64,5 +64,5 @@ docker build -t docker-debian-oracle-java /stretch-slim/java9/jdk/
    [stretch-slim-jdk9/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/stretch-slim/java9/jdk/Dockerfile>
    [stretch-slim-jre9/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/stretch-slim/java9/jre/Dockerfile>
    [stretch-slim-server-jre9/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/stretch-slim/java9/server-jre/Dockerfile> 
-   [MIT License]: <https://raw.githubusercontent.com/MihaiBogdanEugen/debian-oraclejdk/master/LICENSE>
-   [Oracle Binary Code License Agreement]: <https://raw.githubusercontent.com/MihaiBogdanEugen/debian-oraclejdk/master/Oracle_Binary_Code_License_Agreement%20for%20the%20Java%20SE%20Platform_Products_and_JavaFX>
+   [MIT License]: <https://raw.githubusercontent.com/MihaiBogdanEugen/docker-debian-oracle-java/master/LICENSE>
+   [Oracle Binary Code License Agreement]: <https://raw.githubusercontent.com/MihaiBogdanEugen/docker-debian-oracle-java/master/Oracle_Binary_Code_License_Agreement%20for%20the%20Java%20SE%20Platform_Products_and_JavaFX>
