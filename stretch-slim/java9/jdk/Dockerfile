@@ -4,15 +4,16 @@ FROM debian:stretch-slim
 # Setup JAVA_HOME
 ENV JAVA_HOME="/usr/lib/jvm/default-jvm"
 
-# Install Oracle JDK (Java SE Development Kit) 9.0.1
+# Install Oracle JDK (Java SE Development Kit) 9.0.4
 RUN JAVA_VERSION=9 && \
-    JAVA_UPDATE=0.1 && \
+    JAVA_UPDATE=0.4 && \
     JAVA_BUILD=11 && \
-    JAVA_SHA256_SUM=2cdaf0ff92d0829b510edd883a4ac8322c02f2fc1beae95d048b6716076bc014 && \
+    JAVA_PATH=c2514751926b4512b076cc82f959763f && \
+    JAVA_SHA256_SUM=90c4ea877e816e3440862cfa36341bc87d05373d53389ec0f2d54d4e8c95daa2 && \
     apt-get update && \
     apt-get -y install wget && \
     cd "/tmp" && \
-    wget --header "Cookie: oraclelicense=accept-securebackup-cookie;" "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}.${JAVA_UPDATE}+${JAVA_BUILD}/jdk-${JAVA_VERSION}.${JAVA_UPDATE}_linux-x64_bin.tar.gz" && \
+    wget --header "Cookie: oraclelicense=accept-securebackup-cookie;" "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}.${JAVA_UPDATE}+${JAVA_BUILD}/${JAVA_PATH}/jdk-${JAVA_VERSION}.${JAVA_UPDATE}_linux-x64_bin.tar.gz" && \
     echo "${JAVA_SHA256_SUM}" "jdk-${JAVA_VERSION}.${JAVA_UPDATE}_linux-x64_bin.tar.gz" | sha256sum -c - && \
     tar -xzf "jdk-${JAVA_VERSION}.${JAVA_UPDATE}_linux-x64_bin.tar.gz" && \
     mkdir -p "/usr/lib/jvm" && \
