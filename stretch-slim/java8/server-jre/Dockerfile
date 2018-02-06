@@ -4,12 +4,12 @@ FROM debian:stretch-slim
 # Setup JAVA_HOME
 ENV JAVA_HOME="/usr/lib/jvm/default-jvm"
 
-# Install Oracle Server JRE (Java SE Runtime Environment) 8u152 with Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files for JDK/JRE 8
+# Install Oracle Server JRE (Java SE Runtime Environment) 8u162 with Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files for JDK/JRE 8
 RUN JAVA_VERSION=8 && \
-    JAVA_UPDATE=152 && \
-    JAVA_BUILD=16 && \
-    JAVA_PATH=aa0333dd3019491ca4f6ddbe78cdb6d0 && \
-    JAVA_SHA256_SUM=7307a55dc385921c7d9fb90bd84c452df26ba05261e907713bd731d5f78b15cc && \
+    JAVA_UPDATE=162 && \
+    JAVA_BUILD=12 && \
+    JAVA_PATH=0da788060d494f5095bf8624735fa2f1 && \
+    JAVA_SHA256_SUM=6942684acb6001748a01fc090a18f52ebd8cbfcf7be27ec6131981906bfa8b53 && \
     JCE_SHA256_SUM=f3020a3922efd6626c2fff45695d527f34a8020e938a49292561f18ad1320b59 && \ 
     apt-get update && \
     apt-get -y install wget unzip && \
