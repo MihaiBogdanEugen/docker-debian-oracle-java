@@ -4,12 +4,12 @@ FROM debian:stretch-slim
 # Setup JAVA_HOME
 ENV JAVA_HOME="/usr/lib/jvm/default-jvm"
 
-# Install Oracle Server JRE (Java SE Runtime Environment) 9.0.4
-RUN JAVA_VERSION=9 && \
-    JAVA_UPDATE=0.4 && \
-    JAVA_BUILD=11 && \
-    JAVA_PATH=c2514751926b4512b076cc82f959763f && \
-    JAVA_SHA256_SUM=d29b6b3008c814abd8ab5e4bde9278d6ee7699898333992ee8d080612b5197ca && \
+# Install Oracle Server JRE (Java SE Runtime Environment) 10.0.1
+RUN JAVA_VERSION=10 && \
+    JAVA_UPDATE=0.1 && \
+    JAVA_BUILD=10 && \
+    JAVA_PATH=fb4372174a714e6b8c52526dc134031e && \
+    JAVA_SHA256_SUM=9c22d2f232c8a298c6fdea12356042814655dec3db24c2b0ff096b21f2c36e43 && \
     apt-get update && \
     apt-get -y install wget && \
     cd "/tmp" && \
@@ -24,6 +24,7 @@ RUN JAVA_VERSION=9 && \
            "$JAVA_HOME/bin/keytool" \
            "$JAVA_HOME/bin/rmid" \
            "$JAVA_HOME/bin/rmiregistry" \
+           "$JAVA_HOME/conf/security/policy/README.txt" \            
            "$JAVA_HOME/lib/"*javafx* \
            "$JAVA_HOME/lib/"*jfx* \
            "$JAVA_HOME/lib/jfr" \

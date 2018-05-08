@@ -1,23 +1,23 @@
-# Start from debian stretch-slim
-FROM debian:stretch-slim
+# Start from debian jessie-slim
+FROM debian:jessie-slim
 
 # Setup JAVA_HOME
 ENV JAVA_HOME="/usr/lib/jvm/default-jvm"
 
-# Install Oracle JDK (Java SE Development Kit) 9.0.4
-RUN JAVA_VERSION=9 && \
-    JAVA_UPDATE=0.4 && \
-    JAVA_BUILD=11 && \
-    JAVA_PATH=c2514751926b4512b076cc82f959763f && \
-    JAVA_SHA256_SUM=90c4ea877e816e3440862cfa36341bc87d05373d53389ec0f2d54d4e8c95daa2 && \
+# Install Oracle JRE (Java SE Runtime Environment) 10.0.1
+RUN JAVA_VERSION=10 && \
+    JAVA_UPDATE=0.1 && \
+    JAVA_BUILD=10 && \
+    JAVA_PATH=fb4372174a714e6b8c52526dc134031e && \
+    JAVA_SHA256_SUM=385e67769312577b3d2e8ba08798cb354039c223a89671ba328caafa3943eb86 && \
     apt-get update && \
     apt-get -y install wget && \
     cd "/tmp" && \
-    wget --header "Cookie: oraclelicense=accept-securebackup-cookie;" "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}.${JAVA_UPDATE}+${JAVA_BUILD}/${JAVA_PATH}/jdk-${JAVA_VERSION}.${JAVA_UPDATE}_linux-x64_bin.tar.gz" && \
-    echo "${JAVA_SHA256_SUM}" "jdk-${JAVA_VERSION}.${JAVA_UPDATE}_linux-x64_bin.tar.gz" | sha256sum -c - && \
-    tar -xzf "jdk-${JAVA_VERSION}.${JAVA_UPDATE}_linux-x64_bin.tar.gz" && \
+    wget --header "Cookie: oraclelicense=accept-securebackup-cookie;" "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}.${JAVA_UPDATE}+${JAVA_BUILD}/${JAVA_PATH}/jre-${JAVA_VERSION}.${JAVA_UPDATE}_linux-x64_bin.tar.gz" && \
+    echo "${JAVA_SHA256_SUM}" "jre-${JAVA_VERSION}.${JAVA_UPDATE}_linux-x64_bin.tar.gz" | sha256sum -c - && \
+    tar -xzf "jre-${JAVA_VERSION}.${JAVA_UPDATE}_linux-x64_bin.tar.gz" && \
     mkdir -p "/usr/lib/jvm" && \
-    mv "/tmp/jdk-${JAVA_VERSION}.${JAVA_UPDATE}" "/usr/lib/jvm/java-${JAVA_VERSION}-oracle" && \
+    mv "/tmp/jre-${JAVA_VERSION}.${JAVA_UPDATE}" "/usr/lib/jvm/java-${JAVA_VERSION}-oracle" && \
     ln -s "java-${JAVA_VERSION}-oracle" "$JAVA_HOME" && \
     ln -s "$JAVA_HOME/bin/"* "/usr/bin/" && \
     rm -rf "$JAVA_HOME/README.html" \
@@ -26,19 +26,18 @@ RUN JAVA_VERSION=9 && \
            "$JAVA_HOME/bin/keytool" \
            "$JAVA_HOME/bin/orbd" \
            "$JAVA_HOME/bin/pack200" \
-           "$JAVA_HOME/bin/policytool" \
            "$JAVA_HOME/bin/rmid" \
            "$JAVA_HOME/bin/rmiregistry" \
            "$JAVA_HOME/bin/servertool" \
            "$JAVA_HOME/bin/tnameserv" \
            "$JAVA_HOME/bin/unpack200" \    
-           "$JAVA_HOME/conf/security/javaws.policy" \    
+           "$JAVA_HOME/conf/security/javaws.policy" \
+           "$JAVA_HOME/conf/security/policy/README.txt" \  
            "$JAVA_HOME/lib/desktop" \
            "$JAVA_HOME/lib/"deploy* \
            "$JAVA_HOME/lib/"*javafx* \
            "$JAVA_HOME/lib/"*jfx* \
            "$JAVA_HOME/lib/jfr" \
-           "$JAVA_HOME/lib/missioncontrol" \
            "$JAVA_HOME/lib/oblique-fonts" \   
            "$JAVA_HOME/lib/libdecora_sse.so" \
            "$JAVA_HOME/lib/"libprism_*.so \
@@ -48,8 +47,7 @@ RUN JAVA_VERSION=9 && \
            "$JAVA_HOME/lib/"libjavafx*.so \
            "$JAVA_HOME/lib/"libjfx*.so \
            "$JAVA_HOME/lib/plugin-legacy.jar" \
-           "$JAVA_HOME/lib/plugin.jar" \
-           "$JAVA_HOME/lib/src.zip" && \
+           "$JAVA_HOME/lib/plugin.jar" && \
     apt-get -y autoremove wget && \
     apt-get -y clean && \
     rm -rf "/tmp/"* \
