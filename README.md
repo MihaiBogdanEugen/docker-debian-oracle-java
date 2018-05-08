@@ -40,7 +40,7 @@ docker build -t mbe1224/debian-oracle-java /stretch-slim/java9/jdk/
 
 ### About this image: ###
 
-- Currently supporting java versions **8u162** and **9.0.4**
+- Currently supporting java versions **8u172** and **9.0.4**
 - Debian "slim" image variant
 - Oracle Java (JDK/JRE/ServerJRE) addded without MissionControl, VisualVM, JavaFX, ReadMe files, source archives, etc.
 - Oracle Java Cryptography Extension added
