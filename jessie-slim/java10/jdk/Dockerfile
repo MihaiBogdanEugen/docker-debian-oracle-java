@@ -4,12 +4,12 @@ FROM debian:jessie-slim
 # Setup JAVA_HOME
 ENV JAVA_HOME="/usr/lib/jvm/default-jvm"
 
-# Install Oracle JDK (Java SE Development Kit) 9.0.4
-RUN JAVA_VERSION=9 && \
-    JAVA_UPDATE=0.4 && \
-    JAVA_BUILD=11 && \
-    JAVA_PATH=c2514751926b4512b076cc82f959763f && \
-    JAVA_SHA256_SUM=90c4ea877e816e3440862cfa36341bc87d05373d53389ec0f2d54d4e8c95daa2 && \
+# Install Oracle JDK (Java SE Development Kit) 10.0.1
+RUN JAVA_VERSION=10 && \
+    JAVA_UPDATE=0.1 && \
+    JAVA_BUILD=10 && \
+    JAVA_PATH=fb4372174a714e6b8c52526dc134031e && \
+    JAVA_SHA256_SUM=ae8ed645e6af38432a56a847597ac61d4283b7536688dbab44ab536199d1e5a4 && \
     apt-get update && \
     apt-get -y install wget && \
     cd "/tmp" && \
@@ -33,6 +33,7 @@ RUN JAVA_VERSION=9 && \
            "$JAVA_HOME/bin/tnameserv" \
            "$JAVA_HOME/bin/unpack200" \    
            "$JAVA_HOME/conf/security/javaws.policy" \    
+           "$JAVA_HOME/conf/security/policy/README.txt" \    
            "$JAVA_HOME/lib/desktop" \
            "$JAVA_HOME/lib/"deploy* \
            "$JAVA_HOME/lib/"*javafx* \

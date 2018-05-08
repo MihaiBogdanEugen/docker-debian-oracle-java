@@ -8,24 +8,24 @@
 [![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:jessie-slim-jre8.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:jessie-slim-jre8 "")
 * ```jessie-slim-server-jre8``` _\([jessie-slim-server-jre8/Dockerfile]\)_
 [![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:jessie-slim-server-jre8.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:jessie-slim-server-jre8 "")
-* ```jessie-slim-jdk9``` _\([jessie-slim-jdk9/Dockerfile]\)_
-[![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:jessie-slim-jdk9.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:jessie-slim-jdk9 "")
-* ```jessie-slim-jre9``` _\([jessie-slim-jre9/Dockerfile]\)_
-[![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:jessie-slim-jre9.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:jessie-slim-jre9 "")
-* ```jessie-slim-server-jre9``` _\([jessie-slim-server-jre9/Dockerfile]\)_
-[![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:jessie-slim-server-jre9.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:jessie-slim-server-jre9 "")
+* ```jessie-slim-jdk10``` _\([jessie-slim-jdk10/Dockerfile]\)_
+[![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:jessie-slim-jdk10.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:jessie-slim-jdk10 "")
+* ```jessie-slim-jre10``` _\([jessie-slim-jre10/Dockerfile]\)_
+[![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:jessie-slim-jre10.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:jessie-slim-jre10 "")
+* ```jessie-slim-server-jre10``` _\([jessie-slim-server-jre10/Dockerfile]\)_
+[![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:jessie-slim-server-jre10.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:jessie-slim-server-jre10 "")
 * ```stretch-slim-jdk8``` _\([stretch-slim-jdk8/Dockerfile]\)_
 [![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:stretch-slim-jdk8.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:stretch-slim-jdk8 "")
 * ```stretch-slim-jre8``` _\([stretch-slim-jre8/Dockerfile]\)_
 [![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:stretch-slim-jre8.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:stretch-slim-jre8 "")
 * ```stretch-slim-server-jre8``` _\([stretch-slim-server-jre8/Dockerfile]\)_
 [![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:stretch-slim-server-jre8.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:stretch-slim-server-jre8 "")
-* ```stretch-slim-jdk9```, ```latest``` _\([stretch-slim-jdk9/Dockerfile]\)_
-[![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:stretch-slim-jdk9.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:stretch-slim-jdk9 "")
-* ```stretch-slim-jre9``` _\([stretch-slim-jre9/Dockerfile]\)_
-[![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:stretch-slim-jre9.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:stretch-slim-jre9 "")
-* ```stretch-slim-server-jre9``` _\([stretch-slim-server-jre9/Dockerfile]\)_
-[![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:stretch-slim-server-jre9.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:stretch-slim-server-jre9 "")
+* ```stretch-slim-jdk10```, ```latest``` _\([stretch-slim-jdk10/Dockerfile]\)_
+[![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:stretch-slim-jdk10.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:stretch-slim-jdk10 "")
+* ```stretch-slim-jre10``` _\([stretch-slim-jre10/Dockerfile]\)_
+[![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:stretch-slim-jre10.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:stretch-slim-jre10 "")
+* ```stretch-slim-server-jre10``` _\([stretch-slim-server-jre10/Dockerfile]\)_
+[![](https://images.microbadger.com/badges/image/mbe1224/debian-oracle-java:stretch-slim-server-jre10.svg)](https://microbadger.com/images/mbe1224/debian-oracle-java:stretch-slim-server-jre10 "")
 
 #### All tag names follow the naming convention: ###
 
@@ -35,12 +35,12 @@
 
 Build the image
 ```shell
-docker build -t mbe1224/debian-oracle-java /stretch-slim/java9/jdk/
+docker build -t mbe1224/debian-oracle-java /stretch-slim/java10/jdk/
 ```
 
 ### About this image: ###
 
-- Currently supporting java versions **8u172** and **9.0.4**
+- Currently supporting java versions **8u172** and **10.0.1**
 - Debian "slim" image variant
 - Oracle Java (JDK/JRE/ServerJRE) addded without MissionControl, VisualVM, JavaFX, ReadMe files, source archives, etc.
 - Oracle Java Cryptography Extension added
@@ -56,14 +56,14 @@ docker build -t mbe1224/debian-oracle-java /stretch-slim/java9/jdk/
    [jessie-slim-jdk8/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/jessie-slim/java8/jdk/Dockerfile>
    [jessie-slim-jre8/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/jessie-slim/java8/jre/Dockerfile>
    [jessie-slim-server-jre8/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/jessie-slim/java8/server-jre/Dockerfile>  
-   [jessie-slim-jdk9/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/jessie-slim/java9/jdk/Dockerfile>
-   [jessie-slim-jre9/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/jessie-slim/java9/jre/Dockerfile>
-   [jessie-slim-server-jre9/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/jessie-slim/java9/server-jre/Dockerfile>  
+   [jessie-slim-jdk10/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/jessie-slim/java10/jdk/Dockerfile>
+   [jessie-slim-jre10/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/jessie-slim/java10/jre/Dockerfile>
+   [jessie-slim-server-jre10/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/jessie-slim/java10/server-jre/Dockerfile>  
    [stretch-slim-jdk8/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/stretch-slim/java8/jdk/Dockerfile>
    [stretch-slim-jre8/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/stretch-slim/java8/jre/Dockerfile>
    [stretch-slim-server-jre8/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/stretch-slim/java8/server-jre/Dockerfile>
-   [stretch-slim-jdk9/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/stretch-slim/java9/jdk/Dockerfile>
-   [stretch-slim-jre9/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/stretch-slim/java9/jre/Dockerfile>
-   [stretch-slim-server-jre9/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/stretch-slim/java9/server-jre/Dockerfile> 
+   [stretch-slim-jdk10/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/stretch-slim/java10/jdk/Dockerfile>
+   [stretch-slim-jre10/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/stretch-slim/java10/jre/Dockerfile>
+   [stretch-slim-server-jre10/Dockerfile]: <https://github.com/MihaiBogdanEugen/docker-debian-oracle-java/blob/master/stretch-slim/java10/server-jre/Dockerfile> 
    [MIT License]: <https://raw.githubusercontent.com/MihaiBogdanEugen/docker-debian-oracle-java/master/LICENSE>
    [Oracle Binary Code License Agreement]: <https://raw.githubusercontent.com/MihaiBogdanEugen/docker-debian-oracle-java/master/Oracle_Binary_Code_License_Agreement%20for%20the%20Java%20SE%20Platform_Products_and_JavaFX>
