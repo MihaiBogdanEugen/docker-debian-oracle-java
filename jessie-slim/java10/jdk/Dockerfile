@@ -4,12 +4,12 @@ FROM debian:jessie-slim
 # Setup JAVA_HOME
 ENV JAVA_HOME="/usr/lib/jvm/default-jvm"
 
-# Install Oracle JDK (Java SE Development Kit) 10.0.1
+# Install Oracle JDK (Java SE Development Kit) 10.0.2
 RUN JAVA_VERSION=10 && \
-    JAVA_UPDATE=0.1 && \
-    JAVA_BUILD=10 && \
-    JAVA_PATH=fb4372174a714e6b8c52526dc134031e && \
-    JAVA_SHA256_SUM=ae8ed645e6af38432a56a847597ac61d4283b7536688dbab44ab536199d1e5a4 && \
+    JAVA_UPDATE=0.2 && \
+    JAVA_BUILD=13 && \
+    JAVA_PATH=19aef61b38124481863b1413dce1855f && \
+    JAVA_SHA256_SUM=6633c20d53c50c20835364d0f3e172e0cbbce78fff81867488f22a6298fa372b && \
     apt-get update && \
     apt-get -y install wget && \
     cd "/tmp" && \
