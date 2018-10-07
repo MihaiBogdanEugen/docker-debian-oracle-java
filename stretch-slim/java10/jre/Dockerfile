@@ -4,12 +4,12 @@ FROM debian:stretch-slim
 # Setup JAVA_HOME
 ENV JAVA_HOME="/usr/lib/jvm/default-jvm"
 
-# Install Oracle JRE (Java SE Runtime Environment) 10.0.1
+# Install Oracle JRE (Java SE Runtime Environment) 10.0.2
 RUN JAVA_VERSION=10 && \
-    JAVA_UPDATE=0.1 && \
-    JAVA_BUILD=10 && \
-    JAVA_PATH=fb4372174a714e6b8c52526dc134031e && \
-    JAVA_SHA256_SUM=385e67769312577b3d2e8ba08798cb354039c223a89671ba328caafa3943eb86 && \
+    JAVA_UPDATE=0.2 && \
+    JAVA_BUILD=13 && \
+    JAVA_PATH=19aef61b38124481863b1413dce1855f && \
+    JAVA_SHA256_SUM=7d2909a597574f1821903790bb0f31aaa57ab7348e3ae53639c850371450845d && \
     apt-get update && \
     apt-get -y install wget && \
     cd "/tmp" && \
